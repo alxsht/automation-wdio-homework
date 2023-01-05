@@ -41,7 +41,7 @@ describe('Přesměrování na stránku objednávky', () => {
       return OrderPage.clientName.getValue() === clientName && OrderPage.address.getValue() === address;
     }, {
       timeout: 5000
-    }) //tato funkce dělá to, že ověřuje zda po yvplnění pole ICO, vyplní se i dvě ostaní pole
+    }) //tato funkce dělá to, že ověřuje zda po yvplnění pole "ICO", vyplní se i dvě ostatní pole
 
     OrderPage.substituteName.setValue(substituteName);
     OrderPage.contactName.setValue(contactName);
@@ -75,7 +75,7 @@ describe('Přesměrování na stránku objednávky', () => {
       return OrderPage.clientName.getValue() === clientName && OrderPage.address.getValue() === address;
     }, {
       timeout: 5000
-    }) //tato funkce dělá to, že ověřuje zda po yvplnění pole ICO, vyplní se i dvě ostaní pole
+    }) //tato funkce dělá to, že ověřuje zda po yvplnění pole "ICO", vyplní se i dvě ostatní pole
 
     OrderPage.substituteName.setValue(substituteName);
     OrderPage.contactName.setValue(contactName);
@@ -93,9 +93,6 @@ describe('Přesměrování na stránku objednávky', () => {
     OrderPage.campStudents.setValue(campStudents);
     OrderPage.campAge.setValue(campAdults);
     OrderPage.campAdults.setValue(campAdults);
-
-    // OrderPage.saveOrder.click();
-    // expect(OrderPage.orderAccepted).toBeDisabled();
 
     OrderPage.saveOrder.click();
     expect(OrderPage.saveOrder).toBeDisplayed(); //Objednávka se nemá odeslat
